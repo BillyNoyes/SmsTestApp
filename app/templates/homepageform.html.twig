@@ -1,0 +1,67 @@
+{% extends 'layout.html.twig' %}
+{% block title %}Calculation Form{% endblock %}
+{% block content %}
+    <h2>M2M to SMS</h2>
+    <h3>Enter the device MSISDN and Message</h3>
+    <form action="performcalculation" method="post">
+        <label for="deviceMSISDN">Device MSISDN (include +44): </label><input id="deviceMSISDN" type="text" name="deviceMSISDN1" size="10">
+        <br><br>
+{#        <label for="message">Message: </label><input id="message" type="text" name="message1" size="10">#}
+{#        <p>Select calculation type:</p>#}
+{#        <label for="calctype_addition"><input id="calctype_addition" type="radio" name="calctype" value="addition"#}
+{#                                              checked="checked">Add</label>#}
+{#        <label for="calctype_subtraction"><input id="calctype_subtraction" type="radio" name="calctype"#}
+{#                                                 value="subtraction">Subtract</label>#}
+{#        <label for="calctype_multiplication"><input id="calctype_multiplication" type="radio" name="calctype"#}
+{#                                                    value="multiplication">Multiply</label>#}
+{#        <label for="calctype_division"><input id="calctype_division" type="radio" name="calctype" value="division">Divide</label>#}
+
+{#        Switch control settings#}
+        <p>Switch 1</p>
+        <label for="switch1_on"><input id="switch1_on" type="radio" name="switch1" value="on"
+                                                      checked="checked">On</label>
+        <label for="switch1_off"><input id="switch1_off" type="radio" name="switch1"
+                                                         value="off">Off</label>
+
+        <p>Switch 2</p>
+        <label for="switch2_on"><input id="switch2_on" type="radio" name="switch2" value="on"
+                                       checked="checked">On</label>
+        <label for="switch2_off"><input id="switch2_off" type="radio" name="switch2"
+                                        value="off">Off</label>
+
+        <p>Switch 3</p>
+        <label for="switch3_on"><input id="switch3_on" type="radio" name="switch3" value="on"
+                                       checked="checked">On</label>
+        <label for="switch3_off"><input id="switch3_off" type="radio" name="switch3"
+                                        value="off">Off</label>
+
+        <p>Switch 4</p>
+        <label for="switch4_on"><input id="switch4_on" type="radio" name="switch4" value="on"
+                                       checked="checked">On</label>
+        <label for="switch4_off"><input id="switch4_off" type="radio" name="switch4"
+                                        value="off">Off</label>
+
+        <br><br>
+
+{#        Fan control settings#}
+        <p>Fan</p>
+        <label for="fan_forward"><input id="fan_forward" type="radio" name="fan" value="forward"
+                                       checked="checked">Forward</label>
+        <label for="fan_reverse"><input id="fan_reverse" type="radio" name="fan"
+                                        value="reverse">Reverse</label>
+
+        <br><br><br>
+
+{#        Temperature control settings#}
+        <label for="temperature">Temperature: </label><input id="temperature" type="text" name="temperature1" size="10"><label for="temperature"> Degrees Celsius</label>
+        <br><br><br>
+
+{#        Last digit entered settings#}
+        <label for="lastDigit">Last Entered Digit: </label><input id="lastDigit" type="text" name="lastDigit1" size="10">
+        <br><br>
+
+        <hr>
+        <input type="submit" value="Send Message">
+        <input type="reset" value="Clear">
+    </form>
+{% endblock %}
